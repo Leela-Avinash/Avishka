@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import ClgImage from "../assets/JNTU-GV_clg.jpg";
+import ClgImage from "../assets/IMG20241022194557.jpg";
 
 const About = () => {
     return (
@@ -8,7 +8,7 @@ const About = () => {
             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Learn More About Us
             </h1>
-            <div className="flex justify-evenly flex-col md:flex-row items-center w-full flex-wrap gap-6 md:gap-4">
+            <div className="flex justify-center flex-col md:flex-row items-center w-full flex-wrap gap-6 md:gap-10  ">
                 {[
                     {
                         Image: ClgImage,

@@ -18,7 +18,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.5 }}
                 className="relative text-center space-y-6 max-w-3xl z-10"
             >
-                <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
+                <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600 text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight drop-shadow-lg">
                     Project Expo
                 </h1>
 
@@ -29,14 +29,14 @@ const HeroSection = () => {
                         "Out-Of-The-Box Solutions",
                         1000,
                         "Great Prizes",
-                        1000, 
+                        1000,
                     ]}
                     wrapper="div"
                     speed={50}
                     cursor={false}
                     repeat={Infinity}
                     style={{ display: "inline-block" }}
-                    className="text-2xl md:text-3xl text-muted-foreground"
+                    className="text-2xl md:text-3xl text-gray-700"
                 />
             </motion.div>
         </div>

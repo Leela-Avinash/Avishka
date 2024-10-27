@@ -17,9 +17,9 @@ const Header = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
+    // bg-[rgba(20,20,20,0.8)]
     return (
-        <header className={`bg-[rgba(20,20,20,0.8)] backdrop-blur-md sticky top-0 z-50 border-b border-gray-800 flex md:px-10 px-4 ${isMenuOpen ? 'justify-center items-center' : 'justify-between items-center'}`}>
+        <header className={`bg-black backdrop-blur-md sticky top-0 z-50 border-b border-gray-800 flex md:px-10 px-4 ${isMenuOpen ? 'justify-center items-center' : 'justify-between items-center'}`}>
             <div className={`text-gray-400 text-[20px] md:text-[22px] lg:[28px] ${isMenuOpen ? 'hidden' : 'flex'} items-center`}>
                 <h1>PROJECT EXPO</h1>
             </div>

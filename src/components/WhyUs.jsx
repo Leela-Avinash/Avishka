@@ -63,10 +63,10 @@ const WhyUs = () => {
                             }}
                         />
                         <h1 className="font-bold text-3xl text-center">
-                            Why Inno Expo 360
+                            Why Project Expo
                         </h1>
                         <p className="text-sm px-8 text-center mt-2">
-                            Inno Expo 360" is a comprehensive event that
+                            Project Expo" is a comprehensive event that
                             celebrates innovation from all angles, fostering
                             collaboration and education. It offers a space for
                             individuals and organizations to connect, learn, and
