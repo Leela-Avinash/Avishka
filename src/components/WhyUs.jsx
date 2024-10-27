@@ -38,9 +38,9 @@ const WhyUs = () => {
     ];
 
     return (
-        <div className="flex flex-col lg:flex-row items-center gap-10 my-5">
+        <div className="flex justify-center md:items-start lg:items-center flex-col md:flex-row items-center gap-10 my-5 mx-5 ">
             <div
-                className="lg:sticky lg:top-0 w-full md:w-96 h-72 perspective"
+                className="md:sticky md:top-20 w-full md:w-96 h-72 perspective"
                 id="left"
             >
                 <div
@@ -78,7 +78,7 @@ const WhyUs = () => {
                 </div>
             </div>
             <div
-                className="flex flex-col md:flex-row md:flex-wrap justify-center items-center gap-10 w-full md:w-auto"
+                className="flex flex-col lg:flex-row md:flex-wrap justify-center items-center gap-10 w-full md:w-auto"
                 id="right"
             >
                 {cards.map((card, i) => {
