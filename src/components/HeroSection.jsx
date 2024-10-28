@@ -1,11 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import backGround from "../assets/hero-background.jpg"
 
 const HeroSection = () => {
     return (
+        // bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20
         <div className="relative min-h-[calc(100vh-3.9rem)] flex flex-col items-center justify-center px-4 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20" 
+            // style={{
+            //     backgroundImage: `url(${backGround})`,
+            //     backgroundSize: "cover",
+            //     backgroundPosition: "center",
+            // }}
+            />
 
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)]" />
 
@@ -18,7 +26,7 @@ const HeroSection = () => {
                 transition={{ duration: 0.5 }}
                 className="relative text-center space-y-6 max-w-3xl z-10"
             >
-                <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-600 text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight drop-shadow-lg">
+                <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-800 text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight drop-shadow-lg">
                     Project Expo
                 </h1>
 
@@ -36,7 +44,7 @@ const HeroSection = () => {
                     cursor={false}
                     repeat={Infinity}
                     style={{ display: "inline-block" }}
-                    className="text-2xl md:text-3xl text-gray-700"
+                    className="text-2xl md:text-3xl text-gray-500"
                 />
             </motion.div>
         </div>

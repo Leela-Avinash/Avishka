@@ -8,6 +8,7 @@ import Body from "./components/Body";
 import Timeline from "./components/Timeline";
 import Themes from "./components/Themes";
 import Guidelines from "./components/Guidelines";
+import ContactUs from "./components/ContactUs";
 
 function App() {
     // bg-gradient-to-br from-gray-900 via-black to-gray-800
@@ -21,6 +22,7 @@ function App() {
             <Timeline />
             <Themes />
             <Guidelines />
+            <ContactUs />
             <Body />
         </div>
     );

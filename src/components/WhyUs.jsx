@@ -38,7 +38,7 @@ const WhyUs = () => {
     ];
 
     return (
-        <div className="flex justify-center md:items-start lg:items-center flex-col md:flex-row items-center gap-10 my-5 mx-5 ">
+        <div className="flex justify-center md:items-start lg:items-center flex-col md:flex-row items-center gap-10 my-10 mx-5 ">
             <div
                 className="md:sticky md:top-20 w-full md:w-96 h-72 perspective"
                 id="left"
