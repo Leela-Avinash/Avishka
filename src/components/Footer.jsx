@@ -1,11 +1,63 @@
-import React from 'react'
+import React from "react";
+import { CalendarClock, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
-  return (
-    <div className="flex flex-col items-center p-4 pb-6 gap-6">
-        Footer
-    </div>
-  )
-}
+    return (
+        <footer className="bg-black backdrop:blur-md text-muted-foreground py-8 flex flex-col items-center gap-5">
+            <div className="lg:w-[80%]">
+                <div className="flex flex-wrap justify-evenly gap-8">
+                    <div className="w-full lg:w-1/4 md:w-1/2 flex justify-center">
+                        {/* <i className="bi bi-geo-alt text-2xl mr-3"></i> */}
+                        <MapPin size={20} className="mr-3 mt-2"/>
+                        <div>
+                            <h4 className="text-lg font-semibold">Venue</h4>
+                            <p>
+                                JNTU-GV COLLEGE OF ENGINEERING
+                                <br />
+                                DWARAPUDI, VIZIANAGARAM
+                                <br />
+                                ANDHRA PRADESH - 535003
+                            </p>
+                        </div>
+                    </div>
 
-export default Footer
+                    <div className="w-full lg:w-1/4 md:w-1/2 flex justify-center">
+                        {/* <i className="bi bi-telephone text-2xl mr-3"></i> */}
+                        <Phone size={20} className="mr-3 mt-2"/>
+                        <div>
+                            <h4 className="text-lg font-semibold">Contact Us</h4>
+                            <p>
+                                <strong>Email:</strong>
+                                projectexpo@jntugvcev.edu.in
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="w-full lg:w-1/4 md:w-1/2 flex justify-center">
+                        {/* <i className="bi bi-clock text-2xl mr-3"></i> */}
+                        <CalendarClock size={20} className="mr-3 mt-2"/>
+                        <div>
+                            <h4 className="text-lg font-semibold">Expo Dates</h4>
+                            <p>
+                                <strong>SEPTEMBER 13-15</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="container mx-auto mt-8 text-center">
+                <div className="text-sm">
+                    &copy; Copyright{" "}
+                    <strong>
+                        <span>JNTU-GV</span>
+                    </strong>
+                    . All Rights Reserved
+                </div>
+                <div className="text-sm mt-2">Designed by ProjectExpo Team</div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;

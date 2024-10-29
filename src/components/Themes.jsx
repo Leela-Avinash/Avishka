@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
+import clg from "../assets/JNTU-GV_clg.jpg";
 
 function NextArrow(props) {
     const { onClick } = props;
@@ -128,11 +129,11 @@ function Themes() {
                                                         : "none",
                                                 }}
                                             />
-                                            <div className="h-36 flex items-center rounded-full mt-5">
+                                            <div className="h-36 flex items-center">
                                                 <img
-                                                    src={d.img}
+                                                    src={clg}
                                                     alt=""
-                                                    className="h-36 w-36 rounded-full"
+                                                    // className="h-36 rounded-full"
                                                 />
                                             </div>
                                             <div className="flex flex-col items-center justify-center gap-4 p-4">
@@ -161,7 +162,7 @@ function Themes() {
 const data = [
     {
         name: `John Morgan`,
-        img: `/students/John_Morgan.jpg`,
+        img: `../assets/JNTU-GV_clg.jpg`,
         review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
     },
     {

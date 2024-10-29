@@ -60,9 +60,9 @@ const ProfileCard = ({ Title, Description }) => {
                         </p> */}
                     </div>
                     <div className="flex justify-around w-44 mt-8">
-                        <Linkedin size={22} />
-                        <Instagram size={22} />
-                        <Github size={22} />
+                        <Linkedin size={22} className="hover:text-blue-600"/>
+                        <Instagram size={22} className="hover:text-pink-700"/>
+                        <Github size={22} className="hover:text-white"/>
                     </div>
                 </div>
             </div>

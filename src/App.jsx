@@ -9,6 +9,8 @@ import Timeline from "./components/Timeline";
 import Themes from "./components/Themes";
 import Guidelines from "./components/Guidelines";
 import ContactUs from "./components/ContactUs";
+import Footer from "./components/Footer";
+import Cards from "./components/Cards";
 
 function App() {
     // bg-gradient-to-br from-gray-900 via-black to-gray-800
@@ -23,7 +25,8 @@ function App() {
             <Themes />
             <Guidelines />
             <ContactUs />
-            <Body />
+            <Footer />
+            {/* <Body /> */}
         </div>
     );
 }

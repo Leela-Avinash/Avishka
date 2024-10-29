@@ -7,7 +7,7 @@ const ContactUs = () => {
             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Our Team
             </h1>
-            <div className=" flex w-[90%] justify-between">
+            <div className=" flex w-[90%] justify-around items-center flex-wrap flex-col md:flex-row">
                 <ProfileCard />
                 <ProfileCard />
                 <ProfileCard />
