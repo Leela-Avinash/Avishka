@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import College from "../assets/JNTU-GV_clg.jpg";
-import { Linkedin, Instagram, Github } from "lucide-react";
+import { Linkedin, Instagram, MessageSquareShare } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const ProfileCard = ({ Title, Description }) => {
+const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
 
@@ -34,7 +35,7 @@ const ProfileCard = ({ Title, Description }) => {
                     /> */}
                     <div className="relative inline-block p-[6px] bg-gradient-to-r from-purple-400 to-blue-500 rounded-full mt-5">
                         <img
-                            src={`${College}`}
+                            src={`${Image}`}
                             alt=""
                             className="h-[130px] w-[130px] rounded-full z-10 border-5 border-white"
                         />
@@ -45,24 +46,51 @@ const ProfileCard = ({ Title, Description }) => {
                         className="h-[130px] w-[130px] rounded-full z-10 mt-5 border-[5px] p-2 border-gradient-to-r from-purple-400 to-blue-500"
                     /> */}
                     <h1 className="font-bold text-2xl text-center mt-5">
-                        Behera Venkat Sai
+                        {Title}
                     </h1>
                     {/* <h1 className="font-bold text-lg text-center">Event Coordinator</h1> */}
                     <div className="flex flex-col items-center">
                         <p className="text-[17px] px-8 text-center mt-4 mb-4">
-                            leelaavinash24@gmail.com
+                            {Email}
                         </p>
                         <p className="text-[17px] px-8 text-center mb-2">
-                            +91 1234567890
+                            +91 {PhoneNo}
                         </p>
                         {/* <p className="text-md px-8 text-center">
                             phone: +91 1234567890
                         </p> */}
                     </div>
                     <div className="flex justify-around w-44 mt-8">
-                        <Linkedin size={22} className="hover:text-blue-600"/>
-                        <Instagram size={22} className="hover:text-pink-700"/>
-                        <Github size={22} className="hover:text-white"/>
+                        <a
+                            href={LinkedIn}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Linkedin
+                                size={22}
+                                className="hover:text-blue-600"
+                            />
+                        </a>
+                        <a
+                            href={`https://wa.me/91${PhoneNo}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <MessageSquareShare
+                                size={22}
+                                className="hover:text-pink-700"
+                            />
+                        </a>
+                        <a
+                            href={instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Instagram
+                                size={22}
+                                className="hover:text-pink-700"
+                            />
+                        </a>
                     </div>
                 </div>
             </div>

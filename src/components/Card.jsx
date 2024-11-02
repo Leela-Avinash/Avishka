@@ -57,7 +57,7 @@ const Card = ({ Image, Title, Description }) => {
                                 pointerEvents: isHovered ? "auto" : "none",
                             }}
                         />
-                        <h1 className="font-bold text-xl text-center">{Title}</h1>
+                        <h1 className="font-bold text-xl text-center text-white">{Title}</h1>
                         <p className="text-sm px-8 text-center mt-2">
                             {Description}
                         </p>

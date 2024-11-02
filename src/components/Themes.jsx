@@ -3,6 +3,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
 import clg from "../assets/JNTU-GV_clg.jpg";
+import SmartEducation from "../assets/SmartEducation.jpg";
+import IOT from "../assets/IOT.jpg";
+import HealthAgriculture from "../assets/HealthAgriculture.jpg";
+import SustainableFuture from "../assets/SustainableFuture .jpg";
+import { Link } from "react-router-dom";
 
 function NextArrow(props) {
     const { onClick } = props;
@@ -92,7 +97,7 @@ function Themes() {
             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Themes
             </h1>
-            <div className="w-3/4 m-auto">
+            <div className="w-4/5 m-auto">
                 <div className="mt-5">
                     <Slider {...settings}>
                         {data.map((d, i) => {
@@ -105,7 +110,7 @@ function Themes() {
                             return (
                                 <div
                                     key={i}
-                                    className="w-full lg:w-60 md:w-64 h-[450px] perspective"
+                                    className="w-full lg:w-72 md:w-64 h-[500px] perspective"
                                 >
                                     <div
                                         className={`relative w-full h-full transition-transform duration-700 transform`}
@@ -118,7 +123,7 @@ function Themes() {
                                         onMouseEnter={() => setIsHovered(true)}
                                         onMouseLeave={() => setIsHovered(false)}
                                     >
-                                        <div className="bg-[rgba(30,30,30,0.5)] py-4 backdrop-blur-md border-gray-800 absolute w-full h-full text-gray-800 rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col items-center gap-5 hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] text-muted-foreground">
+                                        <div className="bg-[rgba(30,30,30,0.5)] pd-4 backdrop-blur-md border-gray-800 absolute w-full h-full text-gray-800 rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col items-center gap-5 hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] text-muted-foreground">
                                             <div
                                                 className={`absolute inset-0 transition-opacity duration-300`}
                                                 style={{
@@ -129,23 +134,28 @@ function Themes() {
                                                         : "none",
                                                 }}
                                             />
-                                            <div className="h-36 flex items-center">
-                                                <img
-                                                    src={clg}
-                                                    alt=""
-                                                    // className="h-36 rounded-full"
-                                                />
+                                            <div
+                                                className="h-52 flex items-center w-full"
+                                                style={{
+                                                    backgroundImage: `url(${d.img})`,
+                                                    backgroundSize: "cover",
+                                                    backgroundPosition:
+                                                        "center",
+                                                }}
+                                            >
                                             </div>
                                             <div className="flex flex-col items-center justify-center gap-4 p-4">
-                                                <p className="text-2xl font-semibold">
+                                                <p className="lg:text-xl text-lg font-semibold text-center">
                                                     {d.name}
                                                 </p>
-                                                <p className="text-center">
+                                                <p className="text-center lg:text-md text-sm">
                                                     {d.review}
                                                 </p>
-                                                <button className="bg-indigo-900 text-white text-lg px-6 py-1 rounded-full">
-                                                    Read More
-                                                </button>
+                                                <Link to="/">
+                                                    <button className="bg-indigo-900 text-white text-lg px-6 py-1 rounded-full">
+                                                        Read More
+                                                    </button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -161,29 +171,24 @@ function Themes() {
 
 const data = [
     {
-        name: `John Morgan`,
-        img: `../assets/JNTU-GV_clg.jpg`,
-        review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        name: `Smart Education and Automation`,
+        img: SmartEducation,
+        review: `This theme focuses on integrating automation technologies with robust application security. Participants will create solutions that harness automation while ensuring data integrity and user privacy.`,
     },
     {
-        name: `Ellie Anderson`,
-        img: `/students/Ellie_Anderson.jpg`,
-        review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        name: `IOT and Application Security`,
+        img: IOT,
+        review: `IoT and Application Security emphasizes safeguarding connected devices and applications, addressing risks in data privacy, secure communication, and threat prevention for a resilient IoT ecosystem.`,
     },
     {
-        name: `Nia Adebayo`,
-        img: `/students/Nia_Adebayo.jpg`,
-        review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        name: `Health Agriculture and Rural Development`,
+        img: HealthAgriculture,
+        review: `This theme focuses on innovative solutions to improve healthcare, boost agricultural productivity, and drive sustainable growth in rural communities through technology and practical applications.`,
     },
     {
-        name: `Rigo Louie`,
-        img: `/students/Rigo_Louie.jpg`,
-        review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-        name: `Mia Williams`,
-        img: `/students/Mia_Williams.jpg`,
-        review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+        name: `Sustainable Future through Integrated Technologies`,
+        img: SustainableFuture,
+        review: `This theme encourages creating eco-friendly solutions using integrated technologies to promote sustainability, reduce environmental impact, and support a balanced, resource-efficient future.`,
     },
 ];
 

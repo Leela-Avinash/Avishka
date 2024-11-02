@@ -62,7 +62,7 @@ const WhyUs = () => {
                                 pointerEvents: hovered ? "auto" : "none",
                             }}
                         />
-                        <h1 className="font-bold text-3xl text-center">
+                        <h1 className="font-semibold text-3xl text-center text-white">
                             Why Project Expo
                         </h1>
                         <p className="text-sm px-8 text-center mt-2">
