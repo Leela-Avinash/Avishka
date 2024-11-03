@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../redux/slices/themeSlice';
 import { House, Info, CalendarRange, Lightbulb, ReceiptText, Trophy, CircleDollarSign, Phone, CircleHelp, Menu, X, Sun, Moon, Download } from 'lucide-react'; // Replace with your icon imports
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState("Home");
-    const [isDarkMode, setIsDarkMode] = useState(true);
+    const dispatch = useDispatch();
+    const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
     useEffect(() => {
         if (isDarkMode) {
@@ -13,6 +16,10 @@ const Header = () => {
             document.documentElement.classList.remove("dark");
         }
     }, [isDarkMode]);
+
+    const handleToggleTheme = () => {
+        dispatch(toggleTheme());
+    };
 
     const scrollToSection = (section) => {
         const element = document.getElementById(section);
@@ -26,10 +33,6 @@ const Header = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-    };
-
-    const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
     };
 
     const downloadPoster = () => {
@@ -112,12 +115,12 @@ const Header = () => {
                         <span className="inline">Poster</span>
                     </button>
                     {isDarkMode ?
-                        <button onClick={toggleTheme} className="p-2 text-gray-400 hover:text-gray-200">
+                        <button onClick={() => {handleToggleTheme(); setIsMenuOpen(false); }} className="p-2 text-gray-400 hover:text-gray-200">
                             <Sun size={20} className='inline mr-2'/>
                             <span className="inline">Light Mode</span>
                         </button>
-                    :
-                        <button onClick={toggleTheme} className="p-2 text-gray-400 hover:text-gray-200">
+                    :   
+                        <button onClick={() => {handleToggleTheme(); setIsMenuOpen(false); }} className="p-2 text-gray-400 hover:text-gray-200">
                             <Moon size={20} className='inline mr-2'/>
                             <span className="inline">Dark Mode</span>
                         </button>
