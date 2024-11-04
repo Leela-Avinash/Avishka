@@ -9,6 +9,7 @@ import Themes from "../components/Themes";
 import Guidelines from "../components/Guidelines";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
+import Sponsors from "../components/Sponsors";
 
 const HomePage = () => {
     return (
@@ -19,6 +20,7 @@ const HomePage = () => {
             <Timeline />
             <Themes />
             <Guidelines />
+            <Sponsors />
             <ContactUs />
         </>
     );

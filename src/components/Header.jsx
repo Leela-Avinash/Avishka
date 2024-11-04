@@ -3,7 +3,7 @@ import expoBanner from '../assets/expo-banner.png';
 
 const Header = () => {
   return (
-    <div id='home' className='w-screen'>
+    <div id='home'>
         <img src={expoBanner} alt="Banner" className='w-full'/>
     </div>
   )

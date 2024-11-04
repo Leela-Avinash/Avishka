@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import College from "../assets/JNTU-GV_clg.jpg";
 
 const Card = ({ Image, Title, Description }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -29,7 +28,7 @@ const Card = ({ Image, Title, Description }) => {
             <div
                 className={`relative w-full h-full transition-transform duration-700 transform`}
                 onMouseEnter={() => {
-                    setIsHovered(true);
+                    setIsHovered(!isHovered);
                 }}
                 onMouseLeave={() => {
                     setIsHovered(false);
@@ -48,7 +47,7 @@ const Card = ({ Image, Title, Description }) => {
                         }}
                     ></div>
                 ) : (
-                    <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white backdrop-blur-md border-gray-800 absolute w-full h-full rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col justify-center items-center dark:hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,0.4)] dark:text-muted-foreground text-gray-800 scale-x-[-1]">
+                    <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white backdrop-blur-md border-gray-800 absolute w-full h-full rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col justify-center items-center dark:hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,0.4)] dark:text-muted-foreground text-gray-800 scale-x-[-1] p-2">
                         <div
                             className={`absolute inset-0 transition-opacity duration-300`}
                             style={{
@@ -57,8 +56,10 @@ const Card = ({ Image, Title, Description }) => {
                                 pointerEvents: isHovered ? "auto" : "none",
                             }}
                         />
-                        <h1 className="font-bold text-xl text-center dark:text-white text-[#3564ca]">{Title}</h1>
-                        <p className="text-sm px-8 text-center mt-2 text-[#1F2667] dark:text-muted-foreground">
+                        {/* text-[#3564ca] */}
+                        {/* text-[#1F2667] */}
+                        <h1 className="font-bold text-xl text-center dark:text-white text-gray-900">{Title}</h1>
+                        <p className="text-sm px-8 text-center mt-2 text-gray-600 dark:text-muted-foreground">
                             {Description}
                         </p>
                     </div>

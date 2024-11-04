@@ -39,7 +39,7 @@ const Footer = () => {
                         <div>
                             <h4 className="text-lg font-semibold">Expo Dates</h4>
                             <p>
-                                <strong>SEPTEMBER 13-15</strong>
+                                <strong>December 20-21</strong>
                             </p>
                         </div>
                     </div>

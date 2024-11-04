@@ -1,4 +1,5 @@
 import React from "react";
+import { CheckCircle } from "lucide-react";
 
 const Guidelines = () => {
     const guidelines = [
@@ -7,7 +8,6 @@ const Guidelines = () => {
         "Any One who is studying BE/B.Tech , ME/M.Tech, diploma, MSC, BSC, and BCOM from a recognised institution are eligible to participate.",
         "Team names must be unique.",
         "For selected teams, mentor presence is optional. Mentors, if present, will be charged Rs. 200 per day.",
-        "A fee of Rs. 500 per participant will be charged, covering accommodation and food for selected teams during the hackathon.",
         "Teams must bring any necessary hardware components for their projects, as organizers will not provide hardware.",
         "Teams using hardware must make their final submission during the presentation.",
         "Teams may consist of students from different branches.",
@@ -18,24 +18,22 @@ const Guidelines = () => {
             className="flex flex-col items-center p-4 pb-6 gap-6 lg:mx-24 md:mx-14"
             id="guidelines"
         >
-            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-[#0078ff] dark:via-[#00a2ff] dark:to-[#0099ff] text-[#3564ca] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                ProjectExpo Guidelines
+            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-700 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight my-5">
+                Guidelines
             </h1>
             <div className="w-full p-4 md:p-6 flex flex-col gap-4 text-muted-foreground">
-                <h2 className="text-[#3564ca] text-2xl md:text-4xl lg:text-4xl font-bold tracking-tight">
+                <h2 className="text-gray-900 dark:text-muted-foreground text-2xl md:text-4xl lg:text-4xl font-bold tracking-tight">
                     Participant Guidelines
                 </h2>
                 <div>
-                    {guidelines.map((guideline, index) => (
-                        <p
-                            key={index}
-                            className="lg:text-xl md:text-lg text-md my-4 md:mx-12 mx-6 text-[#1F2667] dark:text-muted-foreground"
-                        >
-                            {guideline}
-                        </p>
+                    {guidelines.map((guideline, index) => ( //md:mx-12 mx-6
+                        <div key={index} className="flex items-start space-x-3 my-4 mx-4">
+                            <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                            <p className="lg:text-xl md:text-lg text-md text-gray-600 dark:text-muted-foreground">{guideline}</p>
+                        </div>
                     ))}
                 </div>
-                <button className="text-white my-5 p-4 w-44 bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full self-center">
+                <button className="text-white mt-5 p-4 w-44 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-full self-center">
                     Register
                 </button>
             </div>

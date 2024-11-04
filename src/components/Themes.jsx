@@ -93,11 +93,11 @@ function Themes() {
     };
     return (
         <div className="flex flex-col items-center p-4 pb-6 gap-6" id="themes">
-            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-[#0078ff] dark:via-[#00a2ff] dark:to-[#0099ff] text-[#3564ca] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-700 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
                 Themes
             </h1>
             <div className="w-4/5 m-auto">
-                <div className="mt-5">
+                <div className="">
                     <Slider {...settings}>
                         {data.map((d, i) => {
                             const [isHovered, setIsHovered] = useState(false);
@@ -145,14 +145,14 @@ function Themes() {
                                             >
                                             </div>
                                             <div className="flex flex-col items-center justify-center gap-4 p-4 border-gray-800">
-                                                <p className="lg:text-xl text-lg font-semibold text-center text-[#3564ca] dark:text-muted-foreground">
+                                                <p className="lg:text-xl text-lg font-semibold text-center text-gray-900 dark:text-muted-foreground">
                                                     {d.name}
                                                 </p>
-                                                <p className="text-center lg:text-md text-sm text-[#1F2667] dark:text-muted-foreground">
+                                                <p className="text-center lg:text-md text-sm text-gray-600 dark:text-muted-foreground">
                                                     {d.review}
                                                 </p>
                                                 <Link to={`/${d.link}`}>
-                                                    <button className="bg-[#2e73c7] text-white text-lg px-6 py-1 rounded-full">
+                                                    <button className="bg-indigo-900 text-white text-lg px-6 py-1 rounded-full">
                                                         Read More
                                                     </button>
                                                 </Link>
@@ -174,13 +174,14 @@ const data = [
         link: "SmartEducationandAutomation",
         name: `Smart Education and Automation`,
         img: SmartEducation,
-        review: `This theme focuses on integrating automation technologies with robust application security. Participants will create solutions that harness automation while ensuring data integrity and user privacy.`,
+        review: `This theme emphasizes the integration of automation technologies within the realm of smart education, encouraging participants to develop innovative solutions that not only streamline educational processes but also prioritize robust application security`,
     },
     {
         link: "IOTandApplicationSecurity",
         name: `IOT and Application Security`,
         img: IOT,
-        review: `IoT and Application Security emphasizes safeguarding connected devices and applications, addressing risks in data privacy, secure communication, and threat prevention for a resilient IoT ecosystem.`,
+        review: `
+This theme focuses on IoT and application security, emphasizing the importance of safeguarding interconnected devices and applications. Participants are encouraged to address critical challenges such as data privacy, secure communication`,
     },
     {
         link: "HealthAgricultureandRuralDevelopment",

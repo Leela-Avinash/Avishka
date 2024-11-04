@@ -66,7 +66,7 @@ const Timeline = () => {
             id="timeline"
         >
             {/* #1F2667 */}
-            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-[#0078ff] dark:via-[#00a2ff] dark:to-[#0099ff] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#3564ca]">
+            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-700 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
                 Time Line
             </h1>
             <VerticalTimeline>
@@ -85,7 +85,7 @@ const Timeline = () => {
                                       }
                                     : {
                                           background: "white",
-                                          color: "#3564ca",
+                                          color: "black",
                                           border: "1px solid #d5d6dc",
                                           boxShadow:
                                               "0px 0px 10px rgba(106, 106, 106, 0.1)",
@@ -117,8 +117,8 @@ const Timeline = () => {
                             date={item.date}
                             iconStyle={{
                                 background: isDarkMode
-                                    ? "linear-gradient(to left, #0078ff, #00d0ff)"
-                                    : "linear-gradient(to right, #0078ff, #00d0ff)",
+                                    ? "linear-gradient(to left, #4F46E5, #7C3AED)"
+                                    : "linear-gradient(to right, #4F46E5, #7C3AED)",
                                 color: "#fff",
                             }}
                             icon={<item.Icon />}
@@ -144,17 +144,17 @@ const Timeline = () => {
                                     pointerEvents: isHovered ? "auto" : "none",
                                 }}
                             />
-                            <h3 className="vertical-timeline-element-title font-bold text-lg dark:text-white text-[#3564ca]">
+                            <h3 className="vertical-timeline-element-title font-bold text-lg dark:text-white text-gray-900">
                                 {item.heading}
                             </h3>
-                            <p className="text-[#1F2667] dark:text-white">{item.description}</p>
+                            <p className="dark:text-white text-gray-600">{item.description}</p>
                         </VerticalTimelineElement>
                     );
                 })}
             </VerticalTimeline>
 
             {/* dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 */}
-            <button className="text-white my-5 p-4 w-44 bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full">
+            <button className="text-white my-5 p-4 w-44 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-full">
                 Final Schedule
             </button>
         </div>

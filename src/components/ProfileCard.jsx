@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import College from "../assets/JNTU-GV_clg.jpg";
 import { Linkedin, Instagram, MessageSquareShare } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -24,16 +23,8 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
             <div
                 className={`relative w-full h-full transition-transform duration-700 transform`}
             >
-                <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white backdrop-blur-md border-gray-800 absolute w-full h-full dark:hover:shadow-[0_0_0px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,1)] text-[#3564ca] rounded-lg flex flex-col items-center dark:text-muted-foreground">
-                    {/* <div
-                        className={`absolute inset-0 transition-opacity duration-300`}
-                        style={{
-                            opacity: isHovered ? 1 : 0,
-                            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 50%)`,
-                            pointerEvents: isHovered ? "auto" : "none",
-                        }}
-                    /> */}
-                    <div className="relative inline-block p-[6px] bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full mt-5">
+                <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white backdrop-blur-md border-gray-800 absolute w-full h-full dark:hover:shadow-[0_0_0px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,1)] text-gray-900 rounded-lg flex flex-col items-center dark:text-muted-foreground">
+                    <div className="relative inline-block p-[5px] bg-blue-500 rounded-full mt-5">
                         <img
                             src={`${Image}`}
                             alt=""
@@ -48,8 +39,8 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                     <h1 className="font-bold text-2xl text-center mt-5">
                         {Title}
                     </h1>
-                    {/* <h1 className="font-bold text-lg text-center">Event Coordinator</h1> */}
-                    <div className="flex flex-col items-center text-[#1F2667] dark:text-muted-foreground">
+                    <h1 className="font-bold text-sm text-center text-gray-400 dark:text-muted-foreground">Student Coordinator</h1>
+                    <div className="flex flex-col items-center text-gray-600 dark:text-muted-foreground">
                         <p className="text-[17px] px-8 text-center mt-4 mb-4">
                             {Email}
                         </p>
@@ -60,9 +51,9 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                             phone: +91 1234567890
                         </p> */}
                     </div>
-                    <div className="flex justify-around w-44 mt-8 dark:text-muted-foreground text-[#1f2667]">
-                        <a
-                            href={LinkedIn}
+                    <div className="flex justify-around w-44 mt-5 dark:text-muted-foreground text-gray-700">
+                        <Link
+                            to={LinkedIn}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -70,8 +61,8 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                                 size={22}
                                 className="hover:text-blue-600"
                             />
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href={`https://wa.me/91${PhoneNo}`}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -80,8 +71,8 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                                 size={22}
                                 className="hover:text-green-600"
                             />
-                        </a>
-                        <a
+                        </Link>
+                        <Link
                             href={instagram}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -90,7 +81,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                                 size={22}
                                 className="hover:text-pink-700"
                             />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

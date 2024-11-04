@@ -1,9 +1,27 @@
 import React, { useState } from "react";
-import { ClipboardList } from "lucide-react";
+import { Trophy, Users, GraduationCap } from "lucide-react";
 
 const WhyUs = () => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [hovered, setHovered] = useState(false)
+    const cards = [
+        {
+            Icon: <Trophy className="w-12 h-12 text-indigo-600" />,
+            title: "Prestigious Awards",
+            description:
+                "Compete for substantial prizes and recognition in the tech community.",
+        },
+        {
+            Icon: <Users className="w-12 h-12 text-indigo-600" />,
+            title: "Networking",
+            description:
+                "Connect with industry experts and like-minded innovators.",
+        },
+        {
+            Icon: <GraduationCap className="w-12 h-12 text-indigo-600" />,
+            title: "Learning Experience",
+            description:
+                "Gain valuable feedback and mentorship from industry leaders.",
+        },
+    ];
 
     const handleMouseMove = (event, setCardMousePosition) => {
         const rect = event.currentTarget.getBoundingClientRect();
@@ -12,119 +30,56 @@ const WhyUs = () => {
         setCardMousePosition({ x, y });
     };
 
-    const handleMove = (event, setMousePosition) => {
-        const rect = event.currentTarget.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        setMousePosition({ x, y });
-    };
-
-    const cards = [
-        {
-            Icon: <ClipboardList className="text-white" />,
-            Description:
-                "Comprehensive event celebrating innovation and collaboration.",
-        },
-        {
-            Icon: <ClipboardList className="text-white" />,
-            Description:
-                "Platform for networking and showcasing innovative ideas.",
-        },
-        {
-            Icon: <ClipboardList className="text-white" />,
-            Description:
-                "Fostering cross-industry synergy and forward-thinking initiatives.",
-        },
-    ];
-
     return (
-        <div className="flex justify-center md:items-start lg:items-center flex-col md:flex-row items-center gap-10 my-10 mx-5 ">
-            <div
-                className="md:sticky md:top-20 w-full md:w-96 h-72 perspective border-[1px] dark:border-0 border-[#d5d6dc] rounded-lg"
-                id="left"
-            >
-                <div
-                    className="relative w-full h-full transition-transform duration-700 transform"
-                    onMouseMove={(event) => handleMouseMove(event, setMousePosition)}
-                    onMouseEnter={() => {
-                        setHovered(true);
-                    }}
-                    onMouseLeave={() => {
-                        setHovered(false);
-                    }}
-                >
-                    <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white py-4 backdrop-blur-md border-gray-800 absolute w-full h-full text-gray-800 rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col justify-center items-center gap-5 dark:hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,0.4)] dark:text-muted-foreground">
-                        <div
-                            className={`absolute inset-0 transition-opacity duration-300`}
-                            style={{
-                                opacity: hovered ? 1 : 0,
-                                background:`radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 50%)`,
-                                pointerEvents: hovered ? "auto" : "none",
-                            }}
-                        />
-                        <h1 className="font-semibold text-3xl text-center dark:text-white text-[#3564ca]">
-                            Why Project Expo
-                        </h1>
-                        <p className="text-sm px-8 text-center mt-2 text-[#1F2667] dark:text-muted-foreground">
-                            Project Expo" is a comprehensive event that
-                            celebrates innovation from all angles, fostering
-                            collaboration and education. It offers a space for
-                            individuals and organizations to connect, learn, and
-                            showcase their innovative ideas, ultimately driving
-                            cross-industry synergy and forward-thinking
-                            initiatives to shape the future.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div
-                className="flex flex-col lg:flex-row md:flex-wrap justify-center items-center gap-10 w-full md:w-auto"
-                id="right"
-            >
-                {cards.map((card, i) => {
-                    const [isHovered, setIsHovered] = useState(false);
-                    const [cardMousePosition, setCardMousePosition] = useState({
-                        x: 0,
-                        y: 0,
-                    });
+        <section id="why-avishka" className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto text-center">
+                <h1 className="dark:text-white text-gray-900 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-10">
+                    Why{" "}
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-700 tracking-tight">
+                        Avishka?
+                    </span>
+                </h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {cards.map((card, i) => {
+                        const [isHovered, setIsHovered] = useState(false);
+                        const [cardMousePosition, setCardMousePosition] =
+                            useState({ x: 0, y: 0 });
 
-                    return (
-                        <div
-                            key={i}
-                            className="w-full lg:w-60 md:w-64 h-52 perspective border-[1px] dark:border-0 border-[#d5d6dc] rounded-lg"
-                        >
+                        return (
                             <div
-                                className={`relative w-full h-full transition-transform duration-700 transform`}
+                                key={i}
+                                className="bg-white dark:bg-[rgba(30,30,30,0.5)] p-6 rounded-xl shadow-md dark:hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] hover:shadow-xl transition-all duration-300 relative overflow-hidden"
                                 onMouseMove={(event) =>
                                     handleMouseMove(event, setCardMousePosition)
                                 }
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
                             >
-                                <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white backdrop-blur-md dark:border-gray-800 absolute w-full h-full text-[#1F2667] rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col justify-center items-center gap-5 dark:hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,0.4)] dark:text-muted-foreground">
-                                    <div
-                                        className={`absolute inset-0 transition-opacity duration-300`}
-                                        style={{
-                                            opacity: isHovered ? 1 : 0,
-                                            background: `radial-gradient(circle at ${cardMousePosition.x}px ${cardMousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 50%)`,
-                                            pointerEvents: isHovered
-                                                ? "auto"
-                                                : "none",
-                                        }}
-                                    />
-                                    <div className="p-2 rounded-full bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] text-white">
+                                <div
+                                    className="absolute inset-0 transition-opacity duration-300"
+                                    style={{
+                                        opacity: isHovered ? 1 : 0,
+                                        background: `radial-gradient(circle at ${cardMousePosition.x}px ${cardMousePosition.y}px, rgba(255,255,255,0.1) 0%, transparent 40%)`,
+                                        pointerEvents: "none",
+                                    }}
+                                />
+                                <div className="flex flex-col items-center">
+                                    <div className="p-3 rounded-full mb-4">
                                         {card.Icon}
                                     </div>
-                                    <p className="text-md px-8 text-center mt-2">
-                                        {card.Description}
+                                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
+                                        {card.title}
+                                    </h3>
+                                    <p className="text-gray-600 dark:text-gray-300">
+                                        {card.description}
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

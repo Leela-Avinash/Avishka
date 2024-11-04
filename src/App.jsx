@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
     return (
-        <div className="App dark:bg-gradient-to-br dark:from-gray-900 dark:via-black dark:to-gray-800 bg-[#f5f6f7] overflow-x-hidden">
+        <div className="dark:bg-gradient-to-br dark:from-gray-900 dark:via-black dark:to-gray-800 bg-[#f5f6f7]">
             <Header />
             <Navbar />
             <Routes>

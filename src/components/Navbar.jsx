@@ -18,6 +18,7 @@ import {
     Moon,
     Download,
 } from "lucide-react";
+import avishkaLogo from "../assets/Avishka_logo.png"
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -102,11 +103,12 @@ const Navbar = () => {
             }`}
         >
             <div
-                className={`dark:text-gray-400 text-white text-[20px] md:text-[22px] lg:[28px] ${
+                className={`dark:text-gray-400 text-white text-[20px] md:text-[28px] lg:[40px] ${
                     isMenuOpen ? "hidden" : "flex"
-                } items-center`}
+                } items-center gap-2`}
             >
-                <h1>PROJECT EXPO</h1>
+                <img src={`${avishkaLogo}`} alt="" className="h-[28px]"/>
+                <h1>Avishka</h1>
             </div>
             <div
                 className={`${
