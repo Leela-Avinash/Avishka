@@ -5,7 +5,7 @@ import ClgImage from "../assets/IMG20241022194557.jpg";
 const About = () => {
     return (
         <div className="flex flex-col items-center p-4 pb-6 gap-6" id="about">
-            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 text-[#3564ca] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-[#0078ff] dark:via-[#00a2ff] dark:to-[#0099ff] text-[#3564ca] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Learn More About Us
             </h1>
             <div className="flex justify-center flex-col md:flex-row items-center w-full flex-wrap gap-6 md:gap-10  ">

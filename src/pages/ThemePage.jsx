@@ -49,7 +49,7 @@ const ThemePage = () => {
         <div className="container mx-auto p-6 md:w-[85%]">
             {selectedTheme ? (
                 <div className="text-center">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-10 dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 text-[#3564ca]">
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold pb-10 dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-[#0078ff] dark:via-[#00a2ff] dark:to-[#0099ff] text-[#3564ca]">
                         {selectedTheme.name}
                     </h1>
                     <div className="flex flex-col md:flex-row items-center md:items-center gap-8">
@@ -59,13 +59,13 @@ const ThemePage = () => {
                             className="w-full md:w-1/3 rounded-lg shadow-lg"
                         />
                         <div className="text-left md:w-2/3">
-                            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 text-[#3564ca] mb-2">
+                            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#3564ca] mb-2">
                                 About
                             </h2>
                             <p className="text-[#1F2667] dark:text-muted-foreground mb-4 lg:text-lg text-md">
                                 {selectedTheme.about}
                             </p>
-                            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 text-[#3564ca] mb-2">
+                            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold dark:to-blue-500 text-[#3564ca] mb-2">
                                 Goal
                             </h2>
                             <p className="text-[#1F2667] dark:text-muted-foreground mb-4 lg:text-lg text-md">

@@ -51,7 +51,7 @@ const timelineItems = [
 const Timeline = () => {
     const isDarkMode = useSelector((state) => state.theme.isDarkMode);
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [hoveredIndex, setHoveredIndex] = useState(null); // Track the index of the hovered item
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const handleMouseMove = (event) => {
         const rect = event.currentTarget.getBoundingClientRect();
@@ -66,7 +66,7 @@ const Timeline = () => {
             id="timeline"
         >
             {/* #1F2667 */}
-            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#3564ca]">
+            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-[#0078ff] dark:via-[#00a2ff] dark:to-[#0099ff] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#3564ca]">
                 Time Line
             </h1>
             <VerticalTimeline>
@@ -85,7 +85,7 @@ const Timeline = () => {
                                       }
                                     : {
                                           background: "white",
-                                          color: "#3e30ff",
+                                          color: "#3564ca",
                                           border: "1px solid #d5d6dc",
                                           boxShadow:
                                               "0px 0px 10px rgba(106, 106, 106, 0.1)",
@@ -116,9 +116,8 @@ const Timeline = () => {
                             }
                             date={item.date}
                             iconStyle={{
-                                // from-[#0078ff] via-[#00a2ff] to-[#00d0ff]
                                 background: isDarkMode
-                                    ? "linear-gradient(to left, #a78bfa, #3b82f6)"
+                                    ? "linear-gradient(to left, #0078ff, #00d0ff)"
                                     : "linear-gradient(to right, #0078ff, #00d0ff)",
                                 color: "#fff",
                             }}
@@ -154,7 +153,8 @@ const Timeline = () => {
                 })}
             </VerticalTimeline>
 
-            <button className="text-white my-5 p-4 w-44 dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full">
+            {/* dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 */}
+            <button className="text-white my-5 p-4 w-44 bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full">
                 Final Schedule
             </button>
         </div>

@@ -112,7 +112,7 @@ const WhyUs = () => {
                                                 : "none",
                                         }}
                                     />
-                                    <div className="p-2 rounded-full dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] text-white">
+                                    <div className="p-2 rounded-full bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] text-white">
                                         {card.Icon}
                                     </div>
                                     <p className="text-md px-8 text-center mt-2">

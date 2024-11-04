@@ -33,7 +33,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                             pointerEvents: isHovered ? "auto" : "none",
                         }}
                     /> */}
-                    <div className="relative inline-block p-[6px] dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full mt-5">
+                    <div className="relative inline-block p-[6px] bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full mt-5">
                         <img
                             src={`${Image}`}
                             alt=""
