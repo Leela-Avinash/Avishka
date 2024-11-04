@@ -16,7 +16,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
 
     return (
         <div
-            className="relative w-80 h-96 perspective mt-3 overflow-visible" // Allow overflow outside card boundaries
+            className="relative w-80 h-96 perspective mt-3 overflow-visible dark:border-0 border-2 border-[#d5d6dc] rounded-lg" // Allow overflow outside card boundaries
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -24,7 +24,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
             <div
                 className={`relative w-full h-full transition-transform duration-700 transform`}
             >
-                <div className="bg-[rgba(30,30,30,0.5)] backdrop-blur-md border-gray-800 absolute w-full h-full text-gray-800 rounded-lg flex flex-col items-center text-muted-foreground">
+                <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white backdrop-blur-md border-gray-800 absolute w-full h-full dark:hover:shadow-[0_0_0px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,1)] text-[#3564ca] rounded-lg flex flex-col items-center dark:text-muted-foreground">
                     {/* <div
                         className={`absolute inset-0 transition-opacity duration-300`}
                         style={{
@@ -33,7 +33,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                             pointerEvents: isHovered ? "auto" : "none",
                         }}
                     /> */}
-                    <div className="relative inline-block p-[6px] bg-gradient-to-r from-purple-400 to-blue-500 rounded-full mt-5">
+                    <div className="relative inline-block p-[6px] dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 bg-gradient-to-r from-[#0078ff] via-[#00a2ff] to-[#00d0ff] rounded-full mt-5">
                         <img
                             src={`${Image}`}
                             alt=""
@@ -49,7 +49,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                         {Title}
                     </h1>
                     {/* <h1 className="font-bold text-lg text-center">Event Coordinator</h1> */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center text-[#1F2667] dark:text-muted-foreground">
                         <p className="text-[17px] px-8 text-center mt-4 mb-4">
                             {Email}
                         </p>
@@ -60,7 +60,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                             phone: +91 1234567890
                         </p> */}
                     </div>
-                    <div className="flex justify-around w-44 mt-8">
+                    <div className="flex justify-around w-44 mt-8 dark:text-muted-foreground text-[#1f2667]">
                         <a
                             href={LinkedIn}
                             target="_blank"
@@ -78,7 +78,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                         >
                             <MessageSquareShare
                                 size={22}
-                                className="hover:text-pink-700"
+                                className="hover:text-green-600"
                             />
                         </a>
                         <a

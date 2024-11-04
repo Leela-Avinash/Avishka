@@ -69,3 +69,15 @@
 .slick-dots li.slick-active button:before {
     color: #8b5cf6 !important;
 }
+
+:root {
+    --timeline-line-color: black;
+}
+
+.dark {
+    --timeline-line-color: white;
+}
+
+.vertical-timeline::before {
+    background-color: var(--timeline-line-color) !important;
+}

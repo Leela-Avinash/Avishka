@@ -2,7 +2,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
-import clg from "../assets/JNTU-GV_clg.jpg";
 import SmartEducation from "../assets/SmartEducation.jpg";
 import IOT from "../assets/IOT.jpg";
 import HealthAgriculture from "../assets/HealthAgriculture.jpg";
@@ -94,7 +93,7 @@ function Themes() {
     };
     return (
         <div className="flex flex-col items-center p-4 pb-6 gap-6" id="themes">
-            <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 text-[#3564ca] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Themes
             </h1>
             <div className="w-4/5 m-auto">
@@ -108,9 +107,10 @@ function Themes() {
                                     y: 0,
                                 });
                             return (
-                                <div
+                                <Link
+                                    to={`/${d.link}`}
                                     key={i}
-                                    className="w-full lg:w-72 md:w-64 h-[500px] perspective"
+                                    className="w-full lg:w-72 md:w-64 h-[500px] perspective dark:border-0 border-2 border-[#d5d6dc] rounded-lg"
                                 >
                                     <div
                                         className={`relative w-full h-full transition-transform duration-700 transform`}
@@ -123,7 +123,7 @@ function Themes() {
                                         onMouseEnter={() => setIsHovered(true)}
                                         onMouseLeave={() => setIsHovered(false)}
                                     >
-                                        <div className="bg-[rgba(30,30,30,0.5)] pd-4 backdrop-blur-md border-gray-800 absolute w-full h-full text-gray-800 rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col items-center gap-5 hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] text-muted-foreground">
+                                        <div className="dark:bg-[rgba(30,30,30,0.5)] bg-white pd-4 backdrop-blur-md border-gray-800 absolute w-full h-full text-gray-800 rounded-lg backface-hidden transform rotate-y-180 overflow-hidden flex flex-col items-center gap-5 dark:hover:shadow-[0_0_15px_rgba(106,90,205,0.3)] hover:shadow-[0_0_15px_rgba(106,106,106,1)] dark:text-muted-foreground">
                                             <div
                                                 className={`absolute inset-0 transition-opacity duration-300`}
                                                 style={{
@@ -144,22 +144,22 @@ function Themes() {
                                                 }}
                                             >
                                             </div>
-                                            <div className="flex flex-col items-center justify-center gap-4 p-4">
-                                                <p className="lg:text-xl text-lg font-semibold text-center">
+                                            <div className="flex flex-col items-center justify-center gap-4 p-4 border-gray-800">
+                                                <p className="lg:text-xl text-lg font-semibold text-center text-[#3564ca] dark:text-muted-foreground">
                                                     {d.name}
                                                 </p>
-                                                <p className="text-center lg:text-md text-sm">
+                                                <p className="text-center lg:text-md text-sm text-[#1F2667] dark:text-muted-foreground">
                                                     {d.review}
                                                 </p>
-                                                <Link to="/">
-                                                    <button className="bg-indigo-900 text-white text-lg px-6 py-1 rounded-full">
+                                                <Link to={`/${d.link}`}>
+                                                    <button className="bg-[#2e73c7] text-white text-lg px-6 py-1 rounded-full">
                                                         Read More
                                                     </button>
                                                 </Link>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </Link>
                             );
                         })}
                     </Slider>
@@ -171,21 +171,25 @@ function Themes() {
 
 const data = [
     {
+        link: "SmartEducationandAutomation",
         name: `Smart Education and Automation`,
         img: SmartEducation,
         review: `This theme focuses on integrating automation technologies with robust application security. Participants will create solutions that harness automation while ensuring data integrity and user privacy.`,
     },
     {
+        link: "IOTandApplicationSecurity",
         name: `IOT and Application Security`,
         img: IOT,
         review: `IoT and Application Security emphasizes safeguarding connected devices and applications, addressing risks in data privacy, secure communication, and threat prevention for a resilient IoT ecosystem.`,
     },
     {
+        link: "HealthAgricultureandRuralDevelopment",
         name: `Health Agriculture and Rural Development`,
         img: HealthAgriculture,
         review: `This theme focuses on innovative solutions to improve healthcare, boost agricultural productivity, and drive sustainable growth in rural communities through technology and practical applications.`,
     },
     {
+        link: "SustainableFutureThroughIntegratedTechnologies",
         name: `Sustainable Future through Integrated Technologies`,
         img: SustainableFuture,
         review: `This theme encourages creating eco-friendly solutions using integrated technologies to promote sustainability, reduce environmental impact, and support a balanced, resource-efficient future.`,

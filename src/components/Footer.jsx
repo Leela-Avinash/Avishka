@@ -3,7 +3,7 @@ import { CalendarClock, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-black backdrop:blur-md text-muted-foreground py-8 flex flex-col items-center gap-5">
+        <footer className="bg-black backdrop:blur-md text-gray-200 dark:text-muted-foreground py-8 flex flex-col items-center gap-5">
             <div className="lg:w-[80%]">
                 <div className="flex flex-wrap justify-evenly gap-8">
                     <div className="w-full lg:w-1/4 md:w-1/2 flex justify-center">
