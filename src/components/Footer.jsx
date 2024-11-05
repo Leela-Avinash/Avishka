@@ -27,7 +27,7 @@ const Footer = () => {
                         <div>
                             <h4 className="text-lg font-semibold">Contact Us</h4>
                             <p>
-                                <strong>Email:</strong>
+                                <strong>Email: </strong>
                                 avishka@jntugvcev.edu.in
                             </p>
                         </div>

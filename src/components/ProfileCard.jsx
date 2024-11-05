@@ -63,7 +63,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                             />
                         </Link>
                         <Link
-                            href={`https://wa.me/91${PhoneNo}`}
+                            to={`https://wa.me/91${PhoneNo}`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -73,7 +73,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                             />
                         </Link>
                         <Link
-                            href={instagram}
+                            to={instagram}
                             target="_blank"
                             rel="noopener noreferrer"
                         >

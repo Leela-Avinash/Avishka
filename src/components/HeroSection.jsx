@@ -80,8 +80,8 @@ const HeroSection = () => {
                         </div>
                         <div className="text-center transform hover:scale-105 transition-transform duration-300">
                             <Building className="h-12 w-12 mx-auto mb-2" />
-                            <p className="font-semibold text-2xl">20+</p>
-                            <p className="text-sm text-indigo-200">Colleges</p>
+                            <p className="font-semibold text-2xl">30+</p>
+                            <p className="text-sm text-indigo-200">Colleges Nationwide</p>
                         </div>
                     </div>
                 </div>
