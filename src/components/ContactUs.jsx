@@ -3,6 +3,7 @@ import ProfileCard from "./ProfileCard";
 import Bhavani from "../assets/Bhavani.jpg";
 import Rohan from "../assets/Rohan.jpg";
 import Venkat from "../assets/Venkat.jpg";
+import Samatha from "../assets/Samatha.jpg"
 import FacultyCard from "./FacultyCards";
 import hod from "../assets/hod.jpg";
 import rddvsr from "../assets/rddvsr.jpg";
@@ -95,7 +96,6 @@ const ContactUs = () => {
                     Email={"sampatiraao@gmail.com"}
                     PhoneNo={"7095490454"}
                     Image={Rohan}
-                    LinkedIn={""}
                     instagram={"https://www.instagram.com/justt.rohan_46/"}
                 />
                 <ProfileCard
@@ -106,14 +106,12 @@ const ContactUs = () => {
                     LinkedIn={
                         "https://linkedin.com/in/maradapu-bhavani-malleswari-075271257"
                     }
-                    instagram={""}
                 />
                 <ProfileCard
                     Title={"K. Samatha"}
                     Email={"ksamatha2004@gmail.com"}
                     PhoneNo={"7416079171"}
-                    Image={""}
-                    LinkedIn={""}
+                    Image={Samatha}
                     instagram={"https://www.instagram.com/samatha._.kelli/"}
                 />
             </div>

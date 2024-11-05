@@ -52,7 +52,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                         </p> */}
                     </div>
                     <div className="flex justify-around w-44 mt-5 dark:text-muted-foreground text-gray-700">
-                        <Link
+                        {LinkedIn && <Link
                             to={LinkedIn}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -61,7 +61,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                                 size={22}
                                 className="hover:text-blue-600"
                             />
-                        </Link>
+                        </Link>}
                         <Link
                             to={`https://wa.me/91${PhoneNo}`}
                             target="_blank"
@@ -72,7 +72,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                                 className="hover:text-green-600"
                             />
                         </Link>
-                        <Link
+                        {instagram && <Link
                             to={instagram}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -81,7 +81,7 @@ const ProfileCard = ({ Title, Email, PhoneNo, Image, LinkedIn, instagram }) => {
                                 size={22}
                                 className="hover:text-pink-700"
                             />
-                        </Link>
+                        </Link>}
                     </div>
                 </div>
             </div>
