@@ -56,7 +56,7 @@ const Navbar = () => {
 
     const downloadPoster = () => {
         const link = document.createElement("a");
-        link.href = "../../poster.jpg"; // Update with the actual path
+        link.href = "../../Avishka_2K24_Poster.jpg"; // Update with the actual path
         link.download = "Avishka_2K24_Poster.jpg";
         link.click();
     };
