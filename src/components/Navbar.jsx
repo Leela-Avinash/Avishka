@@ -18,7 +18,7 @@ import {
     Moon,
     Download,
 } from "lucide-react";
-import avishkaLogo from "../assets/Avishka_logo.png"
+import avishkaLogo from "../assets/Avishka_logo.png";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -107,7 +107,7 @@ const Navbar = () => {
                     isMenuOpen ? "hidden" : "flex"
                 } items-center gap-2`}
             >
-                <img src={`${avishkaLogo}`} alt="" className="h-[28px]"/>
+                <img src={`${avishkaLogo}`} alt="" className="h-[28px]" />
                 <h1>Avishka</h1>
             </div>
             <div
@@ -132,7 +132,7 @@ const Navbar = () => {
                     </button>
                 </div>
                 <nav
-                    className={`flex-col md:flex-row md:flex items-center md:space-y-0 space-x-0 md:space-x-4 ${
+                    className={`flex-col md:flex-row md:flex gap-2 items-center md:space-y-0 space-x-0 md:space-x-4 ${
                         isMenuOpen
                             ? "flex w-fit min-h-screen justify-around mt-4"
                             : "hidden justify-center space-y-2"
@@ -149,14 +149,26 @@ const Navbar = () => {
                                         );
                                         setIsMenuOpen(false);
                                     }}
-                                    className={`flex items-center px-3 py-2 rounded-full transition-all duration-300 text-gray-200 dark:text-gray-400 ${
-                                        activeSection ===
-                                        item.name.toLowerCase()
-                                            ? "bg-[rgba(90,117,205,0.2)] text-[rgb(90,100,205)]"
-                                            : "hover:bg-[rgba(90,165,205,0.1)] text-gray-400 hover:text-gray-100"
-                                    }`}
+                                    className={`relative flex items-center px-1 py-2 transition-all duration-300 text-gray-200 dark:text-gray-400 
+                                        ${
+                                            activeSection ===
+                                            item.name.toLowerCase()
+                                                ? "border-b-2 border-indigo-500 text-indigo-500 bg-[rgba(90,117,205,0.1)]" // Active state with border, text color, and subtle background
+                                                : "hover:text-indigo-300" // Hover text color
+                                        }
+                                        group
+                                    `}
                                 >
-                                    <span className="flex items-center text-gray-200 dark:text-gray-400">
+                                    <span
+                                        className={`flex items-center text-gray-200 dark:text-gray-400
+                                        ${
+                                            activeSection ===
+                                            item.name.toLowerCase()
+                                                ? "text-indigo-600" // Active state with border, text color, and subtle background
+                                                : "hover:text-indigo-300" // Hover text color
+                                        }
+                                    `}
+                                    >
                                         {item.icon}
                                         <span
                                             className={`ml-2 ${
@@ -166,13 +178,14 @@ const Navbar = () => {
                                             {item.name}
                                         </span>
                                     </span>
+                                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
                                 </button>
                             ) : (
                                 <Link
                                     key={item.name}
                                     to={`/${item.link}`}
                                     onClick={() => setIsMenuOpen(false)}
-                                    className={`flex items-center px-3 py-2 rounded-full transition-all duration-300 text-gray-200 dark:text-gray-400 hover:bg-[rgba(90,165,205,0.1)] hover:text-gray-100 ${
+                                    className={`flex items-center px-3 py-2 transition-all duration-300 text-gray-200 dark:text-gray-400 hover:bg-[rgba(90,165,205,0.1)] hover:text-gray-100 ${
                                         activeSection ===
                                         item.name.toLowerCase()
                                             ? "bg-[rgba(90,117,205,0.2)] text-[rgb(90,100,205)]"
@@ -214,13 +227,17 @@ const Navbar = () => {
                             className="p-2 text-gray-200 dark:text-gray-400 hover:text-gray-100"
                         >
                             <Sun size={20} className="inline mr-2" />
-                            <span
-                                className={`ml-2 ${
-                                    isMenuOpen ? "flex" : "hidden"
-                                } xl:inline`}
-                            >
-                                Light Mode
-                            </span>
+                            {isMenuOpen ? (
+                                <span
+                                    className={`ml-2 ${
+                                        isMenuOpen ? "inline" : "hidden"
+                                    } xl:inline`}
+                                >
+                                    Light Mode
+                                </span>
+                            ) : (
+                                <></>
+                            )}
                         </button>
                     ) : (
                         <button
@@ -231,13 +248,17 @@ const Navbar = () => {
                             className="p-2 text-gray-200 dark:text-gray-400 hover:text-gray-100"
                         >
                             <Moon size={20} className="inline mr-2" />
-                            <span
-                                className={`ml-2 ${
-                                    isMenuOpen ? "flex" : "hidden"
-                                } xl:inline`}
-                            >
-                                Dark Mode
-                            </span>
+                            {isMenuOpen ? (
+                                <span
+                                    className={`ml-2 ${
+                                        isMenuOpen ? "inline" : "hidden"
+                                    } xl:inline`}
+                                >
+                                    Dark Mode
+                                </span>
+                            ) : (
+                                <></>
+                            )}
                         </button>
                     )}
                 </nav>

@@ -87,6 +87,7 @@ const Timeline = () => {
                                           background: "white",
                                           color: "black",
                                           border: "1px solid #d5d6dc",
+                                          borderBottom: "3px solid #4F46E5",
                                           boxShadow:
                                               "0px 0px 10px rgba(106, 106, 106, 0.1)",
                                       }

@@ -81,3 +81,15 @@
 .vertical-timeline::before {
     background-color: var(--timeline-line-color) !important;
 }
+
+/* Fade-in from bottom animation */
+.fade-in-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 800ms ease-out, transform 800ms ease-out;
+}
+
+.fade-in-bottom.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

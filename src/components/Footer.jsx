@@ -28,7 +28,7 @@ const Footer = () => {
                             <h4 className="text-lg font-semibold">Contact Us</h4>
                             <p>
                                 <strong>Email:</strong>
-                                projectexpo@jntugvcev.edu.in
+                                avishka@jntugvcev.edu.in
                             </p>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ const Footer = () => {
                     </strong>
                     . All Rights Reserved
                 </div>
-                <div className="text-sm mt-2">Designed by ProjectExpo Team</div>
+                <div className="text-sm mt-2">Designed by Avishka Team</div>
             </div>
         </footer>
     );

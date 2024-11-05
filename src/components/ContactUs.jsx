@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect, useRef } from "react";
 import ProfileCard from "./ProfileCard";
 import Bhavani from "../assets/Bhavani.jpg";
 import Rohan from "../assets/Rohan.jpg";
@@ -7,7 +7,36 @@ import FacultyCard from "./FacultyCards";
 import hod from "../assets/hod.jpg";
 import rddvsr from "../assets/rddvsr.jpg";
 
+const useFadeInOnScroll = () => {
+    const ref = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, []);
+
+    return [ref, isVisible];
+};
+
 const ContactUs = () => {
+    const [ref, isVisible] = useFadeInOnScroll();
+
     const facultyData = [
         {
             title: "Dr. P. Aruna Kumari",
@@ -25,7 +54,8 @@ const ContactUs = () => {
 
     return (
         <div
-            className="flex flex-col items-center p-4 pb-6 gap-6 mb-10"
+            ref={ref}
+            className={`flex flex-col items-center p-4 pb-6 gap-6 mb-10 fade-in-bottom ${isVisible ? 'visible' : ''}`}
             id="contact"
         >
             <h1 className="dark:text-white text-gray-900 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">

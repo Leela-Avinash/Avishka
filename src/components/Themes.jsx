@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState } from "react";
+import React, {useState, useEffect, useRef } from "react";
 import SmartEducation from "../assets/SmartEducation.jpg";
 import IOT from "../assets/IOT.jpg";
 import HealthAgriculture from "../assets/HealthAgriculture.jpg";
@@ -54,7 +54,36 @@ function PrevArrow(props) {
     );
 }
 
+const useFadeInOnScroll = () => {
+    const ref = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            { threshold: 0.4 } // Trigger when 10% of the element is visible
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, []);
+
+    return [ref, isVisible];
+};
+
 function Themes() {
+    const [ref, isVisible] = useFadeInOnScroll();
+
     const settings = {
         dots: true,
         infinite: true,
@@ -92,7 +121,7 @@ function Themes() {
         setCardMousePosition({ x, y });
     };
     return (
-        <div className="flex flex-col items-center p-4 pb-6 gap-6" id="themes">
+        <div ref={ref} className={`flex flex-col items-center p-4 pb-6 gap-6 fade-in-bottom ${isVisible ? 'visible' : ''}`} id="themes">
             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-700 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
                 Themes
             </h1>

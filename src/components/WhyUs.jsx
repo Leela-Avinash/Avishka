@@ -1,7 +1,36 @@
-import React, { useState } from "react";
+import React, {useState, useEffect, useRef } from "react";
 import { Trophy, Users, GraduationCap } from "lucide-react";
 
+const useFadeInOnScroll = () => {
+    const ref = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            { threshold: 0.4 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, []);
+
+    return [ref, isVisible];
+};
+
 const WhyUs = () => {
+    const [ref, isVisible] = useFadeInOnScroll();
+    
     const cards = [
         {
             Icon: <Trophy className="w-12 h-12 text-indigo-600" />,
@@ -31,7 +60,7 @@ const WhyUs = () => {
     };
 
     return (
-        <section id="why-avishka" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="why-avishka" ref={ref} className={`py-20 px-4 sm:px-6 lg:px-8 fade-in-bottom ${isVisible ? 'visible' : ''}`}>
             <div className="max-w-7xl mx-auto text-center">
                 <h1 className="dark:text-white text-gray-900 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-10">
                     Why{" "}

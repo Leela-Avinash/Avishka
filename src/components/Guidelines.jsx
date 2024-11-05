@@ -1,7 +1,36 @@
-import React from "react";
+import React, {useState, useEffect, useRef } from "react";
 import { CheckCircle } from "lucide-react";
 
+const useFadeInOnScroll = () => {
+    const ref = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, []);
+
+    return [ref, isVisible];
+};
+
 const Guidelines = () => {
+    const [ref, isVisible] = useFadeInOnScroll();
+
     const guidelines = [
         "Free registration for all participants.",
         "Each team may have between 1 to 4 participants.",
@@ -15,7 +44,8 @@ const Guidelines = () => {
     ];
     return (
         <div
-            className="flex flex-col items-center p-4 pb-6 gap-6 lg:mx-24 md:mx-14"
+            ref={ref}
+            className={`flex flex-col items-center p-4 pb-6 gap-6 lg:mx-24 md:mx-14 fade-in-bottom ${isVisible ? 'visible' : ''}`}
             id="guidelines"
         >
             <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-700 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight my-5">
