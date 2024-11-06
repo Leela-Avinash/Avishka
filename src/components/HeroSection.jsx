@@ -13,6 +13,8 @@ import AvishkaMainLogo from "../assets/Avishka_main_logo.png";
 
 const HeroSection = () => {
     return (
+        // bg-gradient-to-br from-indigo-600 to-purple-700
+        // bg-gradient-to-br from-gray-800 to-blue-900
         <section className="relative h-screen md:h-[calc(100vh-3.8rem)] py-10 flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-600 to-purple-700">
             <ParticleCanvas />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">

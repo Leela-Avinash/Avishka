@@ -7,11 +7,11 @@ import {
     Info,
     CalendarRange,
     Lightbulb,
+    Shield,
     ReceiptText,
     Trophy,
     CircleDollarSign,
     Phone,
-    CircleHelp,
     Menu,
     X,
     Sun,
@@ -83,14 +83,14 @@ const Navbar = () => {
             link: "SustainableFutureThroughIntegratedTechnologies",
         },
         {
-            name: "Health Agriculture",
+            name: "Rural Development",
             icon: <CircleDollarSign size={18} />,
             link: "HealthAgricultureandRuralDevelopment",
         },
         {
-            name: "IOT Security",
-            icon: <Lightbulb size={18} />,
-            link: "IOTandApplicationSecurity",
+            name: "Cyber Security",
+            icon: <Shield size={18} />,
+            link: "CyberSecurity",
         },
     ];
 

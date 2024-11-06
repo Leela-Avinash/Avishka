@@ -4,9 +4,7 @@ import SmartEducation from "../assets/SmartEducation.jpg";
 import SustainableFuture from "../assets/SustainableFuture .jpg";
 import HealthAgriculture from "../assets/HealthAgriculture.jpg";
 import IOT from "../assets/IOT.jpg";
-import { div } from "framer-motion/client";
-import Navbar from "../components/Navbar";
-import Header from "../components/Header";
+import CyberSecurity from "../assets/CyberSecurity.jpg"
 // Sample array of themes
 const themes = [
     {
@@ -31,12 +29,12 @@ const themes = [
         goal: "The goal of Health, Agriculture, and Rural Development is to empower rural communities through innovative, tech-driven solutions that enhance healthcare, improve agricultural productivity, and strengthen local infrastructure. Participants are tasked with designing applications that provide affordable healthcare, increase crop yields, and support sustainable practices, ultimately contributing to the social and economic development of rural regions. This theme seeks to create lasting impact by building solutions that are accessible, sustainable, and tailored to the unique needs of rural populations.",
     },
     {
-        link: "IOTandApplicationSecurity",
-        name: "IOT and Application Security",
-        image: IOT,
-        about: "The IoT and Application Security theme addresses the critical need for security in the interconnected world of Internet of Things (IoT) devices and digital applications. As IoT continues to expand across industries, securing these devices and their data has become essential to protect against potential vulnerabilities. This theme encourages participants to develop solutions that ensure secure data transmission, protect user privacy, and prevent unauthorized access, thereby creating a safer, more resilient IoT ecosystem that users can trust.",
-        goal: "The goal of IoT and Application Security is to foster innovative approaches to safeguarding connected devices and applications, focusing on data integrity, privacy, and threat prevention. Participants are tasked with designing solutions that mitigate security risks, ensure secure communication between devices, and protect sensitive information. This theme aims to build a robust security framework for IoT systems, empowering industries and individuals to confidently adopt IoT technology while reducing vulnerabilities and enhancing overall security.",
-    },
+        link: "CyberSecurity",
+        name: "Cyber Security",
+        image: CyberSecurity,
+        about: "Cybersecurity is the practice of protecting digital systems, networks, and data from unauthorized access, attacks, and damage. With rapid advancements in technology, cybersecurity has become essential for individuals, businesses, and governments to safeguard sensitive information. Cybersecurity encompasses a wide range of strategies, including encryption, threat detection, and incident response, all aimed at maintaining data integrity and privacy. By addressing risks like hacking, phishing, and malware, cybersecurity helps create a safer digital environment, enabling secure online interactions and fostering trust in digital platforms.",
+        goal: "The primary goal of cybersecurity is to ensure the confidentiality, integrity, and availability of information across digital platforms. By protecting systems from cyber threats, cybersecurity aims to prevent unauthorized access, data breaches, and financial losses. This field focuses on proactively identifying and mitigating vulnerabilities, minimizing risks to individuals and organizations. Effective cybersecurity measures help maintain operational continuity, protect sensitive information, and support resilience against ever-evolving cyber threats, ultimately creating a secure and trustworthy digital landscape for everyone."
+    }
 ];
 
 const ThemePage = () => {

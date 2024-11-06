@@ -2,11 +2,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, {useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import SmartEducation from "../assets/SmartEducation.jpg";
 import IOT from "../assets/IOT.jpg";
 import HealthAgriculture from "../assets/HealthAgriculture.jpg";
 import SustainableFuture from "../assets/SustainableFuture .jpg";
-import { Link } from "react-router-dom";
+import CyberSecurity from "../assets/CyberSecurity.jpg";
 
 function NextArrow(props) {
     const { onClick } = props;
@@ -66,7 +67,7 @@ const useFadeInOnScroll = () => {
                     observer.unobserve(entry.target);
                 }
             },
-            { threshold: 0.4 } // Trigger when 10% of the element is visible
+            { threshold: 0.4 } 
         );
 
         if (ref.current) {
@@ -206,23 +207,22 @@ const data = [
         review: `This theme emphasizes the integration of automation technologies within the realm of smart education, encouraging participants to develop innovative solutions that not only streamline educational processes but also prioritize robust application security`,
     },
     {
-        link: "IOTandApplicationSecurity",
-        name: `IOT and Application Security`,
-        img: IOT,
-        review: `
-This theme focuses on IoT and application security, emphasizing the importance of safeguarding interconnected devices and applications. Participants are encouraged to address critical challenges such as data privacy, secure communication`,
+        link: "SustainableFutureThroughIntegratedTechnologies",
+        name: `Sustainable Future through Integrated Technologies`,
+        img: SustainableFuture,
+        review: `This theme encourages creating eco-friendly solutions using integrated technologies to promote sustainability, reduce environmental impact, and support a balanced, resource-efficient future.`,
+    },
+    {
+        link: "CyberSecurity",
+        name: "Cyber Security",
+        img: CyberSecurity,
+        review: "This theme focuses on safeguarding digital information, addressing system vulnerabilities, defending against cyber threats, and developing innovative security measures to ensure data privacy and resilience in an increasingly connected world."
     },
     {
         link: "HealthAgricultureandRuralDevelopment",
         name: `Health Agriculture and Rural Development`,
         img: HealthAgriculture,
         review: `This theme focuses on innovative solutions to improve healthcare, boost agricultural productivity, and drive sustainable growth in rural communities through technology and practical applications.`,
-    },
-    {
-        link: "SustainableFutureThroughIntegratedTechnologies",
-        name: `Sustainable Future through Integrated Technologies`,
-        img: SustainableFuture,
-        review: `This theme encourages creating eco-friendly solutions using integrated technologies to promote sustainability, reduce environmental impact, and support a balanced, resource-efficient future.`,
     },
 ];
 
