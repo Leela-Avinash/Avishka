@@ -26,13 +26,13 @@ const HeroSection = () => {
                             className="md:h-20 h-14"
                         />
                         <h1 className="text-4xl md:text-6xl font-bold animate-fade-in">
-                            Avishka 2K24
+                            Avishka 2K25
                         </h1>
                     </div>
                     <div className="h-10 flex items-center">
                         <TypeAnimation
                             sequence={[
-                                "Join us on December 20 & 21 for Avishka!",
+                                "Join us on Feb 28 & Mar 1 for Avishka!",
                                 2000,
                                 "", 
                                 500,
