@@ -39,25 +39,25 @@ const Sponsors = () => {
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-gray-700 tracking-tight">
                     Platinum
                 </span>{" "}
-                Sponsors (1 Lakh)
+                Sponsors
             </h1>
             <h1 className="dark:text-white text-gray-900 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-10">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#ae8625] to-[#D4Ac47] tracking-tight">
                     Gold
                 </span>{" "}
-                Sponsors (50 K)
+                Sponsors
             </h1>
             <h1 className="dark:text-white text-gray-900 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-10">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#A8A9AD] to-[#C0C0C3] tracking-tight">
                     Silver
                 </span>{" "}
-                Sponsors (25 K)
+                Sponsors
             </h1>
             <h1 className="dark:text-white text-gray-900 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-10">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#CE8946] to-[#CD7F32] tracking-tight">
                     Bronze
                 </span>{" "}
-                Sponsors (10 K)
+                Sponsors
             </h1>
         </div>
     );
