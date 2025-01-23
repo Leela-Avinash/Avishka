@@ -32,7 +32,7 @@ const HeroSection = () => {
                     <div className="h-10 flex items-center">
                         <TypeAnimation
                             sequence={[
-                                "Join us on Feb 28 & Mar 1 for Avishka!",
+                                "Join us on March 12 & 13 for Avishka!",
                                 2000,
                                 "", 
                                 500,
