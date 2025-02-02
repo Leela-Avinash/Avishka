@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useRef } from "react";
 import { CheckCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const useFadeInOnScroll = () => {
     const ref = useRef(null);
@@ -30,17 +31,20 @@ const useFadeInOnScroll = () => {
 
 const Guidelines = () => {
     const [ref, isVisible] = useFadeInOnScroll();
+    const navigate = useNavigate ();
 
     const guidelines = [
-        "Free registration for all participants.",
-        "Each team may have between 1 to 4 participants.",
-        "Any One who is studying BE/B.Tech , ME/M.Tech, diploma, MSC, BSC, and BCOM from a recognised institution are eligible to participate.",
-        "Team names must be unique.",
-        "For selected teams, mentor presence is optional. Mentors, if present, will be charged Rs. 200 per day.",
-        "Teams must bring any necessary hardware components for their projects, as organizers will not provide hardware.",
-        "Teams using hardware must make their final submission during the presentation.",
-        "Teams may consist of students from different branches.",
-        "ID cards are mandatory for both students and their mentors.",
+        "Only selected teams are required to pay fees.",
+        "The minimum number of members per team is 2, while the maximum is 4 and the fee per head is ₹500 only .",
+        "Teams are authorized to take photographs and record videos during the event.",
+        "Eligibility is open to individuals currently pursuing a BE/B.Tech, ME/M.Tech, or Diploma from a recognized institution.",
+        "Team names must be unique and distinct. ",
+        "Participants are required to bring their own hardware components, as these will not be supplied by the organizers.",
+        "Teams utilizing hardware must ensure their final submission is made during the presentation.",
+        "Participants may form teams comprising students from various branches, as long as all team members belong to the same institution.",
+        "A valid ID card is mandatory for all students",
+        "Timeliness is mandatory for all students.",
+        "Attendance for the full 2-day duration is compulsory for all participants."
     ];
     return (
         <div
@@ -63,8 +67,11 @@ const Guidelines = () => {
                         </div>
                     ))}
                 </div>
-                <button className="text-white mt-5 p-4 w-44 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-full self-center">
-                    Register
+                <button 
+                className="text-white mt-5 p-4 w-44 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-full self-center"
+                onClick={() => {navigate("/ReadMore");}}
+                >
+                    Read More
                 </button>
             </div>
         </div>

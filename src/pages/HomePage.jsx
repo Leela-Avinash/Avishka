@@ -17,7 +17,7 @@ const HomePage = () => {
             <HeroSection />
             <About />
             <WhyUs />
-            {/* <Timeline /> */}
+            <Timeline />
             <Themes />
             <Guidelines />
             <Sponsors />

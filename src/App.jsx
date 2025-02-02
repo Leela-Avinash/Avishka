@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import ThemePage from "./pages/ThemePage";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import Schedule from "./pages/Schedule"
+import ReadMore from "./pages/ReadMore.jsx";
 import Footer from "./components/Footer";
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/:theme" element={<ThemePage />} />
+                <Route path="/Schedule" element = {<Schedule/>}/>
+                <Route path="/ReadMore" element={<ReadMore/>}/>
             </Routes>
             <Footer />
             {/* <div className="flex items-center justify-center min-h-[100dvh] bg-gradient-to-br from-gray-900 via-black to-gray-800 text-center text-white">

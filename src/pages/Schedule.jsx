@@ -5,48 +5,84 @@ import {
 } from "react-vertical-timeline-component";
 import { useNavigate } from "react-router-dom";
 import "react-vertical-timeline-component/style.min.css";
+import Schedule from "./Schedule.jsx"
 import {
     House,
     Info,
-    CalendarRange,
-    Lightbulb,
-    ReceiptText,
-    Trophy,
-    CircleDollarSign,
-    Phone,
-    CircleHelp,
 } from "lucide-react";
 import { useSelector } from "react-redux";
 
 const timelineItems = [
     {
         Icon: House,
-        date: "17th February",
-        heading: "Registration And Idea Submission",
-        description:
-            "Register by this date to secure your spot in the Hackathon. This process is completely online. Don't miss out on this opportunity!",
+        date: "12th March, 10AM to 12PM",
+        heading: "Inauguration" ,
+        description : "Our honourable HOD will inaugurates the Program."
     },
     {
         Icon: Info,
-        date: "2nd March",
-        heading: "Idea Selection and Intimation",
+        date: "12th March, 12PM to 1PM",
+        heading : "Avishka starts ",
         description:
-            "We will notify you about the selection of your idea by this date. The selected teams must be present in the venue before the commencement of the event. Get ready to bring your creativity to life!",
+            " Every team have to be at venue.",
     },
     {
         Icon: Info,
-        date: "12th & 13th March",
-        heading: "Project Expo",
-        description:
-            "Join us for three action-packed days of brainstorming, coding, and collaboration. Let's turn ideas into reality!",
+        date: "12th March, 1PM to 2PM",
+        heading: "Lunch Break",
+        description : "Time to Relax and Refuel."
     },
     {
         Icon: Info,
-        date: "13th March",
-        heading: "Judgement",
+        date: "12th March, 2PM to 5PM",
+        heading : "StreamLine",
         description:
-            "The culmination of your hard work! Present your solutions and stand a chance to win exciting prizes. Our judges will evaluate the projects and announce the winners.",
+            "Arrange all writeups and presentations in a proper way according to Judges.",
     },
+    {
+        Icon : Info,
+        date : "13th March, 9AM to 10AM",
+        heading : "Ready",
+        description : "for round-1 evaluation ."
+    },
+    {
+        Icon : Info,
+        date : "13th March, 10AM to 11AM",
+        heading : "Round-1 Evaluation" ,
+        description : "Our Judges will starts evaluation."
+    },
+    {
+        Icon : Info,
+        date : "13th March, 11 AM to 11:30 AM",
+        heading : "Valuation",
+    },
+    {
+        Icon : Info,
+        date : "13th March,11:30 AM"
+        ,heading : "Announcement ",
+        description : "for round-2 teams"
+    },
+    {
+        Icon : Info,
+        date : "13th March,11:30 AM to 12:30 AM",
+        heading : "Round-2 Evaluation"
+    },
+    {
+        Icon : Info,
+        date : "13th March, 12:30 PM to 2:00 PM",
+        heading : "Lunch  Break"
+    },
+    {
+        Icon : Info,
+        date : "13th March, 2PM to 3PM",
+        heading : "Valuation"
+    },
+    {
+        Icon : Info,
+        date : "13th March, 3PM to 5PM",
+        heading : "Validation ",
+        description : "Winners will be Prized"
+    }
 ];
 
 const Timeline = () => {
@@ -155,13 +191,7 @@ const Timeline = () => {
                 })}
             </VerticalTimeline>
 
-            {/* dark:bg-gradient-to-r dark:from-purple-400 dark:to-blue-500 */}
-            <button
-                className="text-white my-5 p-4 w-44 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-full"
-                onClick={() => { navigate("/Schedule"); }}
-            >
-            Final Schedule
-            </button>
+            
         </div>
     );
 };
